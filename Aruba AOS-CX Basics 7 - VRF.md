@@ -54,7 +54,7 @@ VPCS2> ping 10.1.4.10
 84 bytes from 10.1.4.10 icmp_seq=4 ttl=63 time=2.640 ms
 84 bytes from 10.1.4.10 icmp_seq=5 ttl=63 time=2.634 ms
 ```
->> Se observa que hay ping entre todas las PCs.
+> Se observa que hay ping entre todas las PCs.
 ## Configuramos las VRF
 ```go
 SW1(config)# vrf Red
@@ -75,7 +75,7 @@ interface 1/1/1
     vrf attach Red
     exit
 ```
->> Se observa que cuando se une una interfaz a una VRF la IP configurada se borra.
+> Se observa que cuando se une una interfaz a una VRF la IP configurada se borra.
 ## Configuramos nuevamente las IPs
 ```go
 SW1(config)# int 1/1/1
@@ -189,4 +189,4 @@ Prefix              Nexthop          Interface     VRF(egress)       Origin/   D
 
 Total Route Count : 4
 ```
->> Se observa que solo hay comunicación entre las PCs que pertenecen a la misma VRF, esto debido a que la tabla de enrutamiento es independiente para cada VRF.
+> Se observa que solo hay comunicación entre las PCs que pertenecen a la misma VRF, esto debido a que la tabla de enrutamiento es independiente para cada VRF.
